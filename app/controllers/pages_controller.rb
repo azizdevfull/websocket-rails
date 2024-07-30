@@ -3,6 +3,6 @@ class PagesController < ApplicationController
   end
 
   def hello
-    
+    ActionCable.server.broadcast 'AlertsChannel', 'Hello from Rails!'
   end
 end
